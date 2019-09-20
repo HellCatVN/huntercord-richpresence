@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>HunterCord-RichPresence</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="text-center">
+        <h1>HunterCord</h1>
+        <h3>RichPresence</h3>
+      </div>
+      <div class="row">
+        <div class="col-5">
+          <div class="row">
+            <div class="col-6">
+              <label class="input-title"
+                >STATE
+                <i
+                  class="fas fa-question-circle"
+                  data-toggle="tooltip"
+                  data-html="true"
+                  data-placement="top"
+                  title="[type: char*] <br> The user's current party status"
+                ></i
+              ></label>
+              <input id="state" class="form-control" type="text" />
+            </div>
+            <div class="col-6">
+              <label class="input-title"
+                >DETAILS
+                <i
+                  class="fas fa-question-circle"
+                  data-toggle="tooltip"
+                  data-html="true"
+                  data-placement="top"
+                  title="[type: char*] <br> What the player is currently doing"
+                ></i
+              ></label>
+              <input id="details" class="form-control" type="text" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <label class="input-title"
+                >START TIMESTAMP
+                <i
+                  class="fas fa-question-circle"
+                  data-toggle="tooltip"
+                  data-html="true"
+                  data-placement="top"
+                  title='[type: int64_t] <br> Epoch seconds for game start - including will show time as "elapsed"'
+                ></i
+              ></label>
+              <input id="start-timestamp" class="form-control" type="text" />
+            </div>
+            <div class="col-6">
+              <label class="input-title"
+                >END TIMESTAMP
+                <i
+                  class="fas fa-question-circle"
+                  data-toggle="tooltip"
+                  data-html="true"
+                  data-placement="top"
+                  title='[type: int64_t] <br> Epoch seconds for game end - including will show time as "remaining"'
+                ></i
+              ></label>
+              <input id="end-timestamp" class="form-control" type="text" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <label class="input-title"
+                >LARGE IMAGE KEY
+                <i
+                  class="fas fa-question-circle"
+                  data-toggle="tooltip"
+                  data-html="true"
+                  data-placement="top"
+                  title="[type: char*] <br> Key of the uploaded image for the large profile artwork"
+                ></i
+              ></label>
+              <input id="large-image-key" class="form-control" type="text" />
+            </div>
+            <div class="col-6">
+              <label class="input-title"
+                >LARGE IMAGE TEXT
+                <i
+                  class="fas fa-question-circle"
+                  data-toggle="tooltip"
+                  data-html="true"
+                  data-placement="top"
+                  title="[type: char*] <br> Tooltip for the largeImageKey"
+                ></i
+              ></label>
+              <input id="large-image-text" class="form-control" type="text" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <label class="input-title"
+                >SMALL IMAGE KEY
+                <i
+                  class="fas fa-question-circle"
+                  data-toggle="tooltip"
+                  data-html="true"
+                  data-placement="top"
+                  title="[type: char*] <br> Key of the uploaded image for the small profile artwork"
+                ></i
+              ></label>
+              <input id="small-image-key" class="form-control" type="text" />
+            </div>
+            <div class="col-6">
+              <label class="input-title"
+                >SMALL IMAGE TEXT
+                <i
+                  class="fas fa-question-circle"
+                  data-toggle="tooltip"
+                  data-html="true"
+                  data-placement="top"
+                  title="[type: char*] <br> Tooltip for the smallImageKey"
+                ></i
+              ></label>
+              <input id="small-image-text" class="form-control" type="text" />
+            </div>
+          </div>
+        </div>
+        <div class="col-7">
+          <!-- Nav pills -->
+          <div class="tab-wrapper">
+            <ul class="nav nav-pills" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active active-pills" data-toggle="pill" href="#home">Full Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="pill" href="#menu1">User Popout</a>
+                </li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div id="home" class="container tab-pane active"><br>
+                  <div class="profile-root">
+                    <div class="profile-topSection">
+                        <div id="profile-header">
+                            <div class="round-img avatar-mask" id="avatar-img"></div>
+                            <div class="statusOnline"></div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="menu1" class="container tab-pane fade"><br>
+                  <h3>Menu 1</h3>
+                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+              </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let $ = require("jquery");
+    </script>
+    <script>
+      require("popper.js");
+    </script>
+    <script>
+      require("bootstrap");
+      const ipc = require('electron').ipcRenderer
+    </script>
+    <script>
+      $(document).ready(function() {
+        $('[data-toggle="tooltip"]').tooltip();
+        console.log("Rich Presence Visualizer only available on desktop");
+      });
+      $("#state").keyup(function() {
+        ipc.send('state', this.value)
+      });
+    </script>
+  </body>
+</html>

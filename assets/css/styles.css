@@ -1,0 +1,113 @@
+body {
+  color: #f6f6f7;
+  background: #36393f;
+}
+
+.form-control {
+  color: #f6f6f7;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.form-control:focus {
+  color: #f6f6f7;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-color: #7289da;
+}
+
+.input-title {
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #b9bbbe;
+}
+
+.tooltip-inner {
+  text-align: left;
+}
+
+a {
+  color: #b9bbbe;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav.nav-pills {
+  border-bottom: 1px solid #222528;
+}
+
+.nav-pills .nav-link.active {
+  background: none;
+}
+
+.nav-pills .nav-link.active::after {
+  position: absolute;
+  bottom: 0px;
+  left: 20px;
+  right: 20px;
+  background: #7289da;
+  -webkit-box-shadow: 0 -4px 12px 0 #7289da;
+  box-shadow: 0 -4px 12px 0 #7289da;
+  content: "";
+  height: 2px;
+  -webkit-transition: -webkit-transform 0.125s;
+  transition: -webkit-transform 0.125s;
+  transition: transform 0.125s;
+  transition: transform 0.125s, -webkit-transform 0.125s;
+}
+
+.tab-wrapper {
+  height: 100%;
+  background: rgba(32, 34, 37, 0.3);
+  border: 1px solid rgba(34, 37, 40, 0.6);
+  border-radius: 5px;
+}
+
+.round-img {
+  border-radius: 50%;
+}
+
+#avatar-img {
+  width: 90px;
+  height: 90px;
+  background-clip: padding-box;
+  background-color: none;
+  background-position: 50%;
+  background-size: 100%;
+  background-image: url("../img/avatar.png");
+}
+
+.avatar-mask {
+  -webkit-mask: url("../img/mask.svg");
+  mask: url("../img/mask.svg");
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  mask-type: luminance;
+}
+
+.profile-topSection{
+  background: #7289da;
+}
+
+#profile-header{
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.profile-root {
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  width: 600px;
+  max-width: 100%;
+  -webkit-box-shadow: 0 0 20px 2px rgba(4, 4, 5, 0.3);
+  box-shadow: 0 0 20px 2px rgba(4, 4, 5, 0.3);
+  -webkit-transform: scale(0.85);
+  transform: scale(0.85);
+}
