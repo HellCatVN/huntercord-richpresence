@@ -42,6 +42,10 @@ a {
   background: none;
 }
 
+a:hover {
+  color: #fff;
+}
+
 .nav-pills .nav-link.active::after {
   position: absolute;
   bottom: 0px;
@@ -87,11 +91,11 @@ a {
   mask-type: luminance;
 }
 
-.profile-topSection{
+.profile-topSection {
   background: #7289da;
 }
 
-#profile-header{
+#profile-header {
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -110,4 +114,348 @@ a {
   box-shadow: 0 0 20px 2px rgba(4, 4, 5, 0.3);
   -webkit-transform: scale(0.85);
   transform: scale(0.85);
+}
+
+.avatar-zone {
+  position: relative;
+  border-radius: 50%;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+.statusOnlineProfile {
+  box-shadow: inset 0 0 0 2px rgba(180, 225, 205, 0.6);
+  border-radius: 50%;
+}
+
+.statusProfile {
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  width: 19px;
+  height: 19px;
+}
+
+.statusOnline {
+  background-color: #43b581;
+}
+
+#header-info {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.name-tag {
+  padding-right: 20px;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.username {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.discriminator {
+  font-size: 14px;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+#header-fill {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.activity-profile {
+  color: #fff;
+  padding: 20px;
+  line-height: 16px;
+  font-size: 12px;
+}
+
+.playing-game {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.body-normal {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.body-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.assets-icon {
+  position: relative;
+}
+
+.app-large-icon {
+  width: 90px;
+  height: 90px;
+}
+
+.assets-large-img {
+  -webkit-user-drag: none;
+  border-radius: 4px;
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.assets-large-mask {
+  -webkit-mask: url("../img/app_mask.svg");
+  mask: url("../img/app_mask.svg");
+}
+
+.app-small-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.assets-small-img {
+  -webkit-user-drag: none;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+}
+
+.activity-content {
+  color: hsla(0, 0%, 100%, 0.8);
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-left: 20px;
+  overflow: hidden;
+}
+
+.semi-bold {
+  font-weight: 700;
+}
+
+.text-row {
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.tab-bar-container {
+  border-top: 1px solid hsla(0, 0%, 100%, 0.1);
+  padding-left: 20px;
+}
+
+.tab-bar {
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 55px;
+}
+
+.tab-bar-item {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 14px;
+  border-bottom: 2px solid transparent;
+  display: -webkit-box;
+  margin-left: 40px;
+}
+
+.tab-bar-item.active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+.tab-bar-item.inactive {
+  color: hsla(0, 0%, 100%, 0.6);
+}
+.profile-body {
+  height: 240px;
+  overflow: visible;
+  background: #2f3136;
+}
+
+.user-info-section {
+  margin: 0 20px;
+  padding: 20px 0;
+}
+
+.user-info-section-header {
+  font-size: 12px;
+  font-weight: 700;
+  color: #72767d;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.note-content {
+  margin: -4px;
+  color: #b9bbbe;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 4px;
+}
+
+.user-popout {
+  width: 250px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  -webkit-box-shadow: 0 0 20px 2px rgba(4, 4, 5, 0.3);
+  box-shadow: 0 0 20px 2px rgba(4, 4, 5, 0.3);
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin: 40px auto;
+}
+
+.popout-header {
+  font-size: 16px;
+  color: #fff;
+  line-height: 20px;
+  background: #7289da;
+}
+
+.popout-header-top {
+  padding: 20px 10px;
+  background-color: #7289da;
+}
+
+.flex-box {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-wrap {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.flex-justify {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.flex-vertical {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.flex-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.avatar-wrapper {
+  border-radius: 50%;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.header-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+
+.no-nickname {
+  color: hsla(0, 0%, 100%, 0.6);
+  font-size: 16px;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.no-username {
+  color: #fff;
+}
+
+.popup-content {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.activity-popup {
+  padding: 20px;
+}
+
+.playing-popup {
+  color: #fff;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.body-popup {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pop-large-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.pop-small-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.popup-mask {
+  -webkit-mask: url("../img/popup_mask.svg");
+  mask: url("../img/popup_mask.svg");
+}
+
+.weight-bold {
+  font-weight: 600;
+}
+
+.text-popup {
+  color: hsla(0, 0%, 100%, 0.8);
+  margin-bottom: 2px;
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }

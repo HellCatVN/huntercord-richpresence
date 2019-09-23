@@ -21,9 +21,9 @@
         <h3>RichPresence</h3>
       </div>
       <div class="row">
-        <div class="col-5">
+        <div class="col-md-5 pt-3">
           <div class="row">
-            <div class="col-6">
+            <div class="col-md-6">
               <label class="input-title"
                 >STATE
                 <i
@@ -34,9 +34,9 @@
                   title="[type: char*] <br> The user's current party status"
                 ></i
               ></label>
-              <input id="state" class="form-control" type="text" />
+              <input id="state" class="form-control" type="text"/>
             </div>
-            <div class="col-6">
+            <div class="col-md-6">
               <label class="input-title"
                 >DETAILS
                 <i
@@ -51,7 +51,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-6">
+            <div class="col-md-6">
               <label class="input-title"
                 >START TIMESTAMP
                 <i
@@ -64,7 +64,7 @@
               ></label>
               <input id="start-timestamp" class="form-control" type="text" />
             </div>
-            <div class="col-6">
+            <div class="col-md-6">
               <label class="input-title"
                 >END TIMESTAMP
                 <i
@@ -79,7 +79,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-6">
+            <div class="col-md-6">
               <label class="input-title"
                 >LARGE IMAGE KEY
                 <i
@@ -92,7 +92,7 @@
               ></label>
               <input id="large-image-key" class="form-control" type="text" />
             </div>
-            <div class="col-6">
+            <div class="col-md-6">
               <label class="input-title"
                 >LARGE IMAGE TEXT
                 <i
@@ -107,7 +107,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-6">
+            <div class="col-md-6">
               <label class="input-title"
                 >SMALL IMAGE KEY
                 <i
@@ -120,7 +120,7 @@
               ></label>
               <input id="small-image-key" class="form-control" type="text" />
             </div>
-            <div class="col-6">
+            <div class="col-md-6">
               <label class="input-title"
                 >SMALL IMAGE TEXT
                 <i
@@ -135,32 +135,145 @@
             </div>
           </div>
         </div>
-        <div class="col-7">
+        <div class="col-md-7 pt-3">
           <!-- Nav pills -->
           <div class="tab-wrapper">
             <ul class="nav nav-pills" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link active active-pills" data-toggle="pill" href="#home">Full Profile</a>
+                  <a class="nav-link" data-toggle="pill" href="#full-profile">Full Profile</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="pill" href="#menu1">User Popout</a>
+                  <a class="nav-link active" data-toggle="pill" href="#user-popout">User Popout</a>
                 </li>
               </ul>
               <!-- Tab panes -->
               <div class="tab-content">
-                <div id="home" class="container tab-pane active"><br>
+                <div id="full-profile" class="container tab-pane fade"><br>
                   <div class="profile-root">
                     <div class="profile-topSection">
                         <div id="profile-header">
+                          <div class="avatar-zone">
                             <div class="round-img avatar-mask" id="avatar-img"></div>
-                            <div class="statusOnline"></div>
+                            <div class="statusOnline statusProfile statusOnlineProfile"></div>
+                          </div>
+                          <div id="header-info">
+                            <div class="name-tag">
+                              <span class="username">HellCatVN</span>
+                              <span class="discriminator">#4416</span>
+                            </div>
+                          </div>
                         </div>
+                        <div id="header-fill">
+                          <div class="activity-profile">
+                            <div class="playing-game">Playing a game</div>
+                            <div class="body-normal body-box">
+                              <div class="assets-icon">
+                                  <img
+                                    data-toggle="tooltip"
+                                    data-html="true"
+                                    data-placement="top"
+                                    title="Error 404 Rank"
+                                    class="big-tooltip app-large-icon assets-large-img assets-large-mask"
+                                    src="assets/img/app_icon.png"
+                                  >
+                                  <img 
+                                  data-toggle="tooltip"
+                                  data-html="true"
+                                  data-placement="top"
+                                  title="Unknow Level"
+                                  class="small-tooltip app-small-icon assets-small-img"
+                                  src="assets/img/app_icon.png"
+                                  >
+                              </div>
+                              <div class="activity-content">
+                                <div class="text-row semi-bold view-title">
+                                  As Solo Ranker
+                                </div>
+                                <div  class="text-row view-state">
+                                  Engare the fight
+                                </div>
+                                <div class="text-row view-detail">
+                                  Chaos Mode
+                                </div>
+                                <div class="text-row view-time">
+                                  0:00 left
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tab-bar-container">
+                            <div class="tab-bar">
+                              <div class="tab-bar-item active">User Info</div>  
+                              <div class="tab-bar-item inactive">Mutual Servers</div>   
+                              <div class="tab-bar-item inactive">Mutual Friends</div>                        
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="profile-body">
+                      <div class="user-info-section">
+                        <div class="user-info-section-header">Note</div>
+                        <div class="note-content">Click to add note</div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div id="menu1" class="container tab-pane fade"><br>
-                  <h3>Menu 1</h3>
-                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div id="user-popout" class="container tab-pane active"><br>
+                    <div class="user-popout">
+                      <div class="popout-header">
+                        <div style="flex: 1 1 auto;" class="popout-header-top flex-box flex-vertical flex-justify flex-center flex-align flex-wrap">
+                          <div class="avatar-wrapper">
+                              <div class="round-img avatar-mask" id="avatar-img"></div>
+                              <div class="statusOnline statusProfile statusOnlineProfile"></div>
+                          </div>
+                          <div class="header-text">
+                            <div class="no-nickname">
+                              <span class="no-username">HellCatVN</span>
+                              <span>#4416</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="popup-content">
+                          <div class="activity-popup">
+                            <div class="playing-popup">Playing a game</div>
+                            <div class="body-popup">
+                              <div class="assets-icon">
+                                  <img
+                                    data-toggle="tooltip"
+                                    data-html="true"
+                                    data-placement="top"
+                                    title="Error 404 Rank"
+                                    class="big-tooltip pop-large-icon assets-large-img popup-mask"
+                                    src="assets/img/app_icon.png"
+                                  >
+                                  <img 
+                                  data-toggle="tooltip"
+                                  data-html="true"
+                                  data-placement="top"
+                                  title="Unknow Level"
+                                  class="small-tooltip pop-small-icon assets-small-img"
+                                  src="assets/img/app_icon.png"
+                                  >
+                              </div> 
+                              <div class="activity-content">
+                                <div class="text-popup weight-bold view-title">
+                                  As Solo Ranker
+                                </div>
+                                <div class="text-popup view-state">
+                                  Engare the fight
+                                </div>
+                                <div class="text-popup view-detail">
+                                  Chaos Mode
+                                </div>
+                                <div class="text-popup view-time">
+                                  0:00 left
+                                </div>
+                              </div>                           
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                 </div>
               </div>
           </div>
@@ -170,22 +283,114 @@
     </div>
     <script>
       let $ = require("jquery");
-    </script>
-    <script>
       require("popper.js");
-    </script>
-    <script>
       require("bootstrap");
+      var moment = require('moment');
       const ipc = require('electron').ipcRenderer
+      var momentDurationFormatSetup = require("moment-duration-format");
     </script>
     <script>
       $(document).ready(function() {
         $('[data-toggle="tooltip"]').tooltip();
-        console.log("Rich Presence Visualizer only available on desktop");
+        $("#start-timestamp").attr("placeholder", Date.now());
+        $("#end-timestamp").attr("placeholder", Date.now());
+        $('.view-time').each(function(i,val) {
+          var input_time = parseInt($('#end-timestamp').val());
+          setInterval(() => {
+            var start_time = parseInt($('#start-timestamp').val());
+            var end_time = parseInt($('#end-timestamp').val());
+            if(end_time){
+              calTime(end_time, 'end' , $(this))
+            }else{
+              calTime(start_time, 'start' , $(this))
+            }
+          }, 500);
+        })
       });
       $("#state").keyup(function() {
-        ipc.send('state', this.value)
+        $('.view-state').each(function() {
+          let state_text = $("#state").val()
+          if (!state_text){
+            state_text = "Engare the fight"
+          }
+          $("#state").attr("placeholder", state_text);
+          $(this).text(state_text);
+        })
+        // ipc.send('state', this.value)
       });
+      $("#details").keyup(function() {
+        $('.view-detail').each(function() {
+          let detail_text = $("#details").val()
+          if (!detail_text){
+            detail_text = "Chaos Mode"
+          }
+          $("#details").attr("placeholder", detail_text);
+          $(this).text(detail_text);
+        })
+      });
+      $("#large-image-text").keyup(function (){
+        $('.big-tooltip').each(function(){
+          large_image_text =  $("#large-image-text").val()
+          if (large_image_text){
+            large_image_text = "Error 404 Rank"
+          }
+          $(this).attr("data-original-title", large_image_text);
+        })
+      })
+      $("#small-image-text").keyup(function (){
+        $('.small-tooltip').each(function(){
+          small_image_text =  $("#small-image-text").val()
+          if (small_image_text){
+            small_image_text = "Unknow Level"
+          }
+          $(this).attr("data-original-title", small_image_text);
+        })
+      })
+      function calTime(input_time, type ,element) {
+        if(type == 'start'){
+          var now = moment(Date.now());
+          var end = moment(input_time);
+          var duration = moment.duration(now.diff(end));
+        }else if(type == 'end') {
+          var now = moment(input_time);
+          var end = moment(Date.now());
+          var duration = moment.duration(now.diff(end));
+          if (duration._miliseconds < 0 || duration._data.hours < 0 || duration._data.minutes < 0 || duration._data.seconds < 0) {
+            duration = {
+              _data : {
+                hours : 0,
+                minutes: 0,
+                seconds: 0
+              }
+            }
+          }
+        }
+        var hours = duration._data.hours
+        var minutes = duration._data.minutes
+        var seconds = duration._data.seconds
+        minutes = addZero(minutes);
+        seconds = addZero(seconds);
+        hours = addZero(hours)
+        var final_text = minutes + ":" + seconds;
+        if(hours != 0){
+          final_text =  hours + ":"+ final_text
+        }
+        if(type == 'start'){
+          final_text = final_text + " elapsed" 
+        }else if(type == 'end') {
+          final_text = final_text + " left"
+        }
+        if(!input_time){
+          final_text = "00:00 left"
+        }
+        element.text(final_text)
+      }
+      function addZero(val){
+        if(val < 10){
+          val = "0" + val
+        }
+        return val 
+      }
     </script>
   </body>
 </html>
